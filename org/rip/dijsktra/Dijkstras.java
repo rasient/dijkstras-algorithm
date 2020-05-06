@@ -1,6 +1,8 @@
 package org.rip.dijsktra;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Dijkstras {
 
@@ -16,7 +18,10 @@ public class Dijkstras {
 		g.addVertex('G', Arrays.asList(new Vertex('C', 4), new Vertex('F', 9)));
 		g.addVertex('H', Arrays.asList(new Vertex('E', 1), new Vertex('F', 3)));
 		// find the shortest way
-		System.out.println(g.getShortestPath('A', 'H'));
+		List<Character> list = g.getShortestPath('1', '5');
+		list.add('A');
+		Collections.reverse(list);
+		System.out.println(list);
 	}
 
 }

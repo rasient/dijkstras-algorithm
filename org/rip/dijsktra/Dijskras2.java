@@ -1,6 +1,8 @@
 package org.rip.dijsktra;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Dijskras2 {
 
@@ -14,6 +16,9 @@ public class Dijskras2 {
 		g.addVertex('5', Arrays.asList(new Vertex('4', 6), new Vertex('6', 9)));
 		g.addVertex('6', Arrays.asList(new Vertex('1', 14), new Vertex('3', 2), new Vertex('5', 9)));
 		// find the shortest way
-		System.out.println(g.getShortestPath('1', '5'));
+		List<Character> list = g.getShortestPath('1', '5');
+		list.add('1');
+		Collections.reverse(list);
+		System.out.println(list);
 	}
 }
