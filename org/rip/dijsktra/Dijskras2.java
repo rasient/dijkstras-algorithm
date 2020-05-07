@@ -7,6 +7,7 @@ import java.util.List;
 public class Dijskras2 {
 
 	public static void main(String[] args) {
+		// https://hu.wikipedia.org/wiki/Dijkstra-algoritmus#/media/F%C3%A1jl:Dijkstra_Animation.gif
 		Graph g = new Graph();
 		// from where To where and how much it costs
 		g.addVertex('1', Arrays.asList(new Vertex('2', 7), new Vertex('3', 9), new Vertex('6', 14)));
